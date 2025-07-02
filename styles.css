@@ -23,10 +23,11 @@ body {
 }
 
 .intro {
-  text-align: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  min-height: 100vh;
+  align-items: center; /* Add this */
+  justify-content: center;
 }
 
 footer {
@@ -39,8 +40,26 @@ footer {
   margin-top: auto;
 }
 
+#scroll-down-btn {
+  margin-top: 2em;
+}
+
+#scroll-down-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+p {
+  font-family: monospace, sans-serif, "Press Start 2P";
+  margin-bottom: 2em;
+}
+
+#target-section {
+  background-color: #f6f2eb;
+}
+
 .btn-82,
-.btn-82 *,
+.btn-82,
 .btn-82 :after,
 .btn-82 :before,
 .btn-82:after,
