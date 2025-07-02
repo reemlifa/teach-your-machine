@@ -3,188 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teach your Machine</title>
+    <link rel="stylesheet" href="tutorial.css" />
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>What is Machine Learning?</h2>
-    <p>
-      what is machine learning, how is it used, real life applications, today
-      what you’re going to create.
-    </p>
-
-    <h2>Creating a repository</h2>
-    <p>
-      Go to github.com and sign in or login to your account. Create a new
-      repository (this is where you store all your code) by pressing the green
-      button.
-    </p>
-    <img src="" alt="Screenshot of GitHub's new repository button." />
-    <p>
-      After you’ve successfully created a new repository, click on the green
-      code button, create a codespace on main, wait for codespaces to set up and
-      you’re ready to start coding!
-    </p>
-    <img src="" alt="Screenshot of GitHub's create codespace button." />
-
-    <h2>Adding some files</h2>
-    <p>
-      Click that tiny little file button to start adding files in your project.
-    </p>
-    <img
-      src=""
-      alt="Screenshot of the new file button in the codespace sidebar."
-    />
-    <p>
-      I’m going to add an HTML (basically like a skeleton for your code), CSS
-      (the styling! making it pretty!), and JavaScript (used for interactivity)
-      files to our codespace.
-    </p>
-    <p>
-      Let's head over to index.html. I could just type the skeleton of my
-      website out myself, but I’m kinda lazy. Let's use a shortcut to get a
-      boilerplate () to automatically get the anatomy of my code.
-    </p>
-    <pre><code>! + tab</code></pre>
-
-    <h2>Adding and seeing your code</h2>
-    <p>
-      In my case, I want to create a machine learning model that can
-      differentiate which Hack Club sticker i am holding up. I’m going to add a
-      Heading1 Tag to our HTML (&lt;h1&gt;&lt;/h1&gt;) and I’m going to write
-      “Hack Club Sticker Classifier” in the tags.
-    </p>
-    <img
-      src=""
-      alt="Code snippet showing h1 tag with 'Hack Club Sticker Classifier'."
-    />
-    <p>
-      Amazing! You’ve just written your first lines of code. However, how do you
-      see the changes you create?
-    </p>
-    <p>
-      Let's head over to Extensions on the left sidebar, then type in Live
-      Server.
-    </p>
-    <img
-      src=""
-      alt="Screenshot of the Live Server extension in the VS Code marketplace."
-    />
-    <p>
-      Live Server is an extension that allows us to see our code with real-time
-      changes in our browser whenever we make changes to our code. Click
-      install, (trust the publisher if you get that message), and at the bottom
-      right-hand corner, you should see a button that says Go Live! This will
-      launch a local server of your website that can only be seen on your
-      device. (We’ll go over how to share active links later.)
-    </p>
-    <p>
-      You should see this. Pretty plain, right? We’ll talk more about adding CSS
-      later to make your website as unique as you are.
-    </p>
-    <img
-      src=""
-      alt="Screenshot of a plain webpage with the h1 title 'Hack Club Sticker Classifier'."
-    />
-
-    <h2>Get started</h2>
-    <p>
-      Open Teachable Machine and get started. Start a new standard image project
-      (you can do an audio or pose project, but this tutorial will be using
-      images!).
-    </p>
-    <p>
-      In this tutorial, I’ll be using some Hack Club stickers I found lying
-      around HQ to train my model. However, you can use literally anything to
-      train your model (as long as it's legal).
-    </p>
-    <p>
-      Classes are categories/labels for a data type. These classes are
-      essentially the different things you want the model to be able to
-      distinguish between.
-    </p>
-    <p>
-      In this tutorial, I’m going to be using a Summer of Making Sticker, a Boba
-      Orpheus sticker, and a (not NASA for legal reasons) sticker. However, you
-      can (and should) use literally anything to create classes of data. I’m
-      going to create three classes and rename them with each of the stickers'
-      names.
-    </p>
-    <img
-      src=""
-      alt="Screenshot of Teachable Machine interface with three classes named after stickers."
-    />
-
-    <h2>Uploading and Understanding Data</h2>
-    <p>
-      Now it’s time for the ✨data ✨. Data is super duper important to any ML
-      model.
-    </p>
-
-    <details>
-      <summary>Why is it super important?</summary>
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <a href="#github">Introduction to GitHub</a>
+          <ul>
+            <li class="sub-nav-item">
+              <a href="#what-is-repo">What is a repository</a>
+            </li>
+            <li class="sub-nav-item">
+              <a href="#create-repo">Creating your first repository</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h2>What is Machine Learning?</h2>
       <p>
-        Look at your machine learning model as a newborn baby. A baby has no
-        knowledge, so it needs to see different types of people and things to
-        independently adapt. Your ML model is a baby right now; you need to feed
-        it with data so it learns how to recognize patterns and adapt! You can
-        <a href="#">read this article</a> if you’re interested in learning more.
+        what is machine learning, how is it used, real life applications, today
+        what you’re going to create.
       </p>
-    </details>
 
-    <p>
-      You can either upload a bunch of images from your camera roll or you can
-      take them on your device.
-    </p>
-    <img
-      src=""
-      alt="Screenshot showing options to upload or use webcam for data in Teachable Machine."
-    />
-    <p>
-      Press hold to record a burst of photos. Make sure to get images in a
-      diverse environment (different backgrounds, from different angles, upside
-      down, inside out – the works!). The more data → the better your machine
-      can recognize and adapt to data.
-    </p>
-    <p>Do the same for the rest of your classes.</p>
-
-    <h2>Training your model!</h2>
-    <p>
-      Now that you have 2 (or more) different datasets, it’s time to train your
-      model!. Click the Train Model button and let Teachable Machine do its
-      thing for a few minutes.
-    </p>
-
-    <details>
-      <summary>did you know?</summary>
+      <h2>Creating a repository</h2>
       <p>
-        did you know that teachable machine was created in python? check out its
-        development <a href="#">here</a>, or check out this advanced tutorial
-        for building an image classifier in python <a href="#">here</a>!
+        Go to github.com and sign in or login to your account. Create a new
+        repository (this is where you store all your code) by pressing the green
+        button.
       </p>
-    </details>
-
-    <img
-      src=""
-      alt="Screenshot showing the model is training in Teachable Machine."
-    />
-
-    <h2>Preview</h2>
-    <p>
-      When you see something like this in the preview, you should know now you
-      have a working Machine Learning Model! Incredible work.
-    </p>
-    <p>
-      Test it out! Put your data up and see if your machine recognizes the
-      images or not.
-    </p>
-
-    <details>
-      <summary>machine not recognizing images/not being accurate?</summary>
+      <img src="" alt="Screenshot of GitHub's new repository button." />
       <p>
-        sometimes, with a lack of diverse data, a machine may not fully
-        recognize a type of data. thats why its so so important that we feed it
-        diverse data sets in order to have our data represented in the world!
+        After you’ve successfully created a new repository, click on the green
+        code button, create a codespace on main, wait for codespaces to set up
+        and you’re ready to start coding!
       </p>
-    </details>
+      <img src="" alt="Screenshot of GitHub's create codespace button." />
+
+      <h2>Adding some files</h2>
+      <p>
+        Click that tiny little file button to start adding files in your
+        project.
+      </p>
+      <img
+        src=""
+        alt="Screenshot of the new file button in the codespace sidebar."
+      />
+      <p>
+        I’m going to add an HTML (basically like a skeleton for your code), CSS
+        (the styling! making it pretty!), and JavaScript (used for
+        interactivity) files to our codespace.
+      </p>
+      <p>
+        Let's head over to index.html. I could just type the skeleton of my
+        website out myself, but I’m kinda lazy. Let's use a shortcut to get a
+        boilerplate () to automatically get the anatomy of my code.
+      </p>
+      <pre><code>! + tab</code></pre>
+
+      <h2>Adding and seeing your code</h2>
+      <p>
+        In my case, I want to create a machine learning model that can
+        differentiate which Hack Club sticker i am holding up. I’m going to add
+        a Heading1 Tag to our HTML (&lt;h1&gt;&lt;/h1&gt;) and I’m going to
+        write “Hack Club Sticker Classifier” in the tags.
+      </p>
+      <img
+        src=""
+        alt="Code snippet showing h1 tag with 'Hack Club Sticker Classifier'."
+      />
+      <p>
+        Amazing! You’ve just written your first lines of code. However, how do
+        you see the changes you create?
+      </p>
+      <p>
+        Let's head over to Extensions on the left sidebar, then type in Live
+        Server.
+      </p>
+      <img
+        src=""
+        alt="Screenshot of the Live Server extension in the VS Code marketplace."
+      />
+      <p>
+        Live Server is an extension that allows us to see our code with
+        real-time changes in our browser whenever we make changes to our code.
+        Click install, (trust the publisher if you get that message), and at the
+        bottom right-hand corner, you should see a button that says Go Live!
+        This will launch a local server of your website that can only be seen on
+        your device. (We’ll go over how to share active links later.)
+      </p>
+      <p>
+        You should see this. Pretty plain, right? We’ll talk more about adding
+        CSS later to make your website as unique as you are.
+      </p>
+      <img
+        src=""
+        alt="Screenshot of a plain webpage with the h1 title 'Hack Club Sticker Classifier'."
+      />
+
+      <h2>Get started</h2>
+      <p>
+        Open Teachable Machine and get started. Start a new standard image
+        project (you can do an audio or pose project, but this tutorial will be
+        using images!).
+      </p>
+      <p>
+        In this tutorial, I’ll be using some Hack Club stickers I found lying
+        around HQ to train my model. However, you can use literally anything to
+        train your model (as long as it's legal).
+      </p>
+      <p>
+        Classes are categories/labels for a data type. These classes are
+        essentially the different things you want the model to be able to
+        distinguish between.
+      </p>
+      <p>
+        In this tutorial, I’m going to be using a Summer of Making Sticker, a
+        Boba Orpheus sticker, and a (not NASA for legal reasons) sticker.
+        However, you can (and should) use literally anything to create classes
+        of data. I’m going to create three classes and rename them with each of
+        the stickers' names.
+      </p>
+      <img
+        src=""
+        alt="Screenshot of Teachable Machine interface with three classes named after stickers."
+      />
+
+      <h2>Uploading and Understanding Data</h2>
+      <p>
+        Now it’s time for the ✨data ✨. Data is super duper important to any ML
+        model.
+      </p>
+
+      <details>
+        <summary>Why is it super important?</summary>
+        <p>
+          Look at your machine learning model as a newborn baby. A baby has no
+          knowledge, so it needs to see different types of people and things to
+          independently adapt. Your ML model is a baby right now; you need to
+          feed it with data so it learns how to recognize patterns and adapt!
+          You can
+          <a href="#">read this article</a> if you’re interested in learning
+          more.
+        </p>
+      </details>
+
+      <p>
+        You can either upload a bunch of images from your camera roll or you can
+        take them on your device.
+      </p>
+      <img
+        src=""
+        alt="Screenshot showing options to upload or use webcam for data in Teachable Machine."
+      />
+      <p>
+        Press hold to record a burst of photos. Make sure to get images in a
+        diverse environment (different backgrounds, from different angles,
+        upside down, inside out – the works!). The more data → the better your
+        machine can recognize and adapt to data.
+      </p>
+      <p>Do the same for the rest of your classes.</p>
+
+      <h2>Training your model!</h2>
+      <p>
+        Now that you have 2 (or more) different datasets, it’s time to train
+        your model!. Click the Train Model button and let Teachable Machine do
+        its thing for a few minutes.
+      </p>
+
+      <details>
+        <summary>did you know?</summary>
+        <p>
+          did you know that teachable machine was created in python? check out
+          its development <a href="#">here</a>, or check out this advanced
+          tutorial for building an image classifier in python
+          <a href="#">here</a>!
+        </p>
+      </details>
+
+      <img
+        src=""
+        alt="Screenshot showing the model is training in Teachable Machine."
+      />
+
+      <h2>Preview</h2>
+      <p>
+        When you see something like this in the preview, you should know now you
+        have a working Machine Learning Model! Incredible work.
+      </p>
+      <p>
+        Test it out! Put your data up and see if your machine recognizes the
+        images or not.
+      </p>
+
+      <details>
+        <summary>machine not recognizing images/not being accurate?</summary>
+        <p>
+          sometimes, with a lack of diverse data, a machine may not fully
+          recognize a type of data. thats why its so so important that we feed
+          it diverse data sets in order to have our data represented in the
+          world!
+        </p>
+      </details>
+    </div>
   </body>
 </html>

@@ -1,0 +1,43 @@
+p {
+  font-family: monospace, sans-serif, "Press Start 2P";
+}
+
+h2 {
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 25em;
+  margin-right: 7em;
+  margin-top: 2em;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: #25272b;
+  height: auto;
+  min-height: 100vh;
+  width: 23em;
+  top: 0;
+  left: 0;
+}
+
+nav ul li {
+  margin-top: 10%;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
