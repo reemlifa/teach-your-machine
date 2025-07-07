@@ -19,17 +19,55 @@
       <a href="tutorial.html" class="btn-82"
         ><span>press start to play...</span></a
       >
-      <button id="scroll-down-btn" class="btn-8">
+      <button id="scroll-down-btn" class="btn-82">
         <img src="assets/down-arrow.png" alt="Scroll Down" />
       </button>
     </div>
 
     <div id="target-section">
-      <h1>Target Section</h1>
+      <div id="letter">
+        <h1>Welcome to the world of Machine Learning.</h1>
+        <p>
+          Let me take you back about 13 to 18 years ago. You are freshly out the
+          womb and know nothing about the world around you.
+        </p>
+        <p>
+          With time, you learn about the world around you through experience and
+          growth. It's like the world around you has fed you all the data and
+          now you've become this culmination of experiences…
+        </p>
+        <p>
+          Well basically, those are computers. Machine Learning is literally in
+          its name – your machine learns over time based on data you feed it and
+          adapts to patterns, preferences, and behaviors.
+        </p>
+      </div>
+    </div>
+
+    <div id="target-section2">
+      <h1>By the end of this tutorial here's what you'll be making</h1>
+      <p>you'll need to turn on your camera for this!</p>
+
+      <button class="btn-77" id="btn-77">Start Webcam</button>
+
+      <div id="webcam-container"></div>
+      <div id="label-container"></div>
+      <p>
+        see the
+        <a href="https://github.com/reemlifa/teachable-machine"> source code</a>
+        for this or check out the full website <a>here</a>
+      </p>
     </div>
     <footer>
       <p>made with love by reem</p>
     </footer>
+    <!-- Load TensorFlow.js first -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <!-- Then load Teachable Machine image library -->
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <!-- Then load your script AFTER the libraries -->
     <script src="script.js"></script>
   </body>
 </html>
